@@ -20,8 +20,10 @@
       <ul>
         <% for (var i=0; i<addedTaskDay.length; i++) { %>
             <li>
-              <input type="checkbox" name="checkbox">
-              <%= addedTaskDay[i]; %>
+              <div class="d-flex flex-row justify-content-start align-items-center"> 
+                <input type="checkbox" name="checkbox" class="m-3">
+                <p class="m-0"> <%= addedTaskDay[i]; %> </p>
+              </div>
             </li>
         <% } %>
       </ul> 

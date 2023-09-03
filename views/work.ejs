@@ -19,8 +19,10 @@
     <ul>
       <% for (var i=0; i<addedTaskWork.length; i++) { %>
         <li>
-          <input type="checkbox" name="checkbox">
-          <%= addedTaskWork[i]; %>
+          <div class="d-flex flex-row justify-content-start align-items-center"> 
+          <input type="checkbox" name="checkbox" class="m-3">
+          <p class="m-0"> <%= addedTaskWork[i]; %> </p>
+        </div>
         </li>
       <% } %>
     </ul>

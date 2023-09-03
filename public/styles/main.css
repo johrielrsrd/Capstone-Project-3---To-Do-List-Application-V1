@@ -1,4 +1,4 @@
-ul li.checked {
+ul li p.checked {
     text-decoration: line-through;
   }
 

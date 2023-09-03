@@ -18,14 +18,14 @@
   </div>
 
   <script>
-    let checkBoxesList = document.querySelectorAll("ul > li > input[name=checkbox]");
+    let checkBoxesList = document.querySelectorAll("ul > li > div > input[name=checkbox]");
     
     for (let i = 0; i < checkBoxesList.length; i++) {
       let checkBox = checkBoxesList[i];
       
       checkBox.addEventListener('change', (event) => {
         if (event.target.tagName === 'INPUT') {
-          checkBox.parentElement.classList.toggle("checked");
+          checkBox.nextElementSibling.classList.toggle("checked");
         } 
       });
     }
