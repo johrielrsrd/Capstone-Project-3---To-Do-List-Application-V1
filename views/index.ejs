@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+
+<div class="text-center taskBox">
+  <h1 class="display-5 fw-bold text-body-emphasis">Task For Today</h1>
+  
+  <div class="w-50 m-auto">
+    <form action="/" method="post">
+      <div class="d-flex">
+        <div class="p-2 w-100">
+          <input type="text" id="taskDay" name="taskDay" placeholder="Please enter a task:" required class="form-control"/>
+        </div>
+        <div class="p-1 flex-shrink-1">
+          <input  type="submit" value="ADD" class="btn btn-secondary my-1" />
+        </div>
+      </div>
+    </form>
+    
+      
+    <div class="taskList text-start">
+      <ul>
+        <% for (var i=0; i<addedTaskDay.length; i++) { %>
+            <li>
+              <input type="checkbox" name="checkbox">
+              <%= addedTaskDay[i]; %>
+            </li>
+        <% } %>
+      </ul> 
+    </div>
+  </div>
+</div>
+
+    
+
+ 
+<%- include("partials/footer.ejs") %>
