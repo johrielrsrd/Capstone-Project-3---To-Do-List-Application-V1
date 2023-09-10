@@ -7,26 +7,25 @@
     <form action="/" method="post">
       <div class="d-flex">
         <div class="p-2 w-100">
-          <input type="text" id="taskDay" name="taskDay" placeholder="Please enter a task:" required class="form-control"/>
+          <input type="text" id="taskItem" name="taskItem" placeholder="Please enter a task:" required class="form-control"/>
         </div>
         <div class="p-1 flex-shrink-1">
-          <input  type="submit" value="ADD" class="btn btn-secondary my-1" />
+          <button type="submit" name="customList" value="Today" class="btn btn-secondary my-1">ADD</button>
         </div>
       </div>
     </form>
     
       
     <div class="taskList text-start">
-      <ul>
-        <% for (var i=0; i<addedTaskDay.length; i++) { %>
-            <li>
-              <div class="d-flex flex-row justify-content-start align-items-center"> 
-                <input type="checkbox" name="checkbox" class="m-3">
-                <p class="m-0"> <%= addedTaskDay[i]; %> </p>
+        <% foundItem.forEach(function(item) { %>
+            <form action="/delete" method="post">
+              <div class="taskItem d-flex flex-row justify-content-start align-items-center"> 
+                <input type="checkbox" name="checkbox" value="<%=item.id%>" class="m-3" onChange="this.form.submit()">
+                <p class="m-0"> <%= item.name %> </p>
               </div>
-            </li>
-        <% } %>
-      </ul> 
+              <input type="hidden" name="listName" value="Today"></input>
+            </form>
+        <% }); %>
     </div>
   </div>
 </div>

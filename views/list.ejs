@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+<div class="text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis"><%= customName %></h1>
+
+    <div class="col-lg-6 mx-auto">
+    <form action="/" method="post">
+      <div class="d-flex">
+        <div class="p-2 w-100">
+          <input type="text" id="taskItem" name="taskItem" placeholder="Please enter a task:" required class="form-control" />
+        </div>
+        <div class="p-1 flex-shrink-1">
+          <button type="submit" name="customList" value="<%= customName %>" class="btn btn-secondary my-1">ADD</button>
+      </div>
+    </div>
+    </form>
+    
+    <div class="taskList text-start">
+      <% foundListItem.forEach(function(item) { %>
+          <form action="/delete" method="post">
+            <div class="taskItem d-flex flex-row justify-content-start align-items-center"> 
+              <input type="checkbox" name="checkbox" value="<%=item.id%>" class="m-3" onChange="this.form.submit()">
+              <p class="m-0"> <%= item.name %> </p>
+            </div>
+            <input type="hidden" name="listName" value="<%= customName %>"></input>
+          </form>
+      <% }); %>
+    </div>
+  </div>
+</div>
+    
+
+<%- include("partials/footer.ejs") %>
