@@ -8,7 +8,7 @@ const app = express();
 const port = 3000;
 
 mongoose
-  .connect("mongodb+srv://admin-john:test123@cluster0.artntf3.mongodb.net/?retryWrites=true&w=majority/todolistDB")
+  .connect("mongodb+srv://admin-john:test123@cluster0.artntf3.mongodb.net/todolistDB")
   .then(() => {
     console.log(`Connected to todolistDB via mongoose on mongoDB`);
   })
