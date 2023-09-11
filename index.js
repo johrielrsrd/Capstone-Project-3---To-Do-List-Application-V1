@@ -14,7 +14,7 @@ mongoose
   })
   .catch((error) => {
     console.error("Error connecting to database: ", error);
-  }); //Initialize connection to database. //mongodb+srv://admin-john:test123@cluster0.artntf3.mongodb.net/todolistDB
+  }); //Initialize connection to database. //mongodb+srv://admin-john:test123@cluster0.artntf3.mongodb.net/todolistDB/
 
 const itemsSchema = new Schema({
   name: String,
