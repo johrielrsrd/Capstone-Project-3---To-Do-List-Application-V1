@@ -1,3 +1,81 @@
 p.checked {
     text-decoration: line-through;
   }
+
+
+body {
+  text-align: center;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.3em;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.taskToolCtn {
+  border: 1px solid black;
+  padding: 5px;
+  box-shadow: 5px 10px 8px #888888;
+  width: 350px;
+  background-color: #EFF5F5;
+}
+
+.formCtn {
+  height: 30px;
+}
+
+.inputBox {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin-bottom: 5px;
+}
+
+.inputBarCtn {
+  flex-grow: 2;
+  
+}
+
+.inputBar {
+  border: 1px solid black;
+  width: 97%;
+  height: 37px;
+  font-size: 15px;
+}
+
+button[name=customList] {
+  height: 41px;
+  border: none;
+  background-color: #497174;
+  color:white;
+  transition-duration: 0.4s;
+}
+
+button[name=customList]:hover {
+  background-color: #EB6440;
+  cursor: pointer;
+}
+
+
+.taskItem {
+  display: flex;
+}
+
+.checkBoxItem {
+  margin: 15px;
+}
+
+.outputItem {
+  word-break: break-word;
+
+}
+
+footer > p {
+  margin-top: 30px;
+  font-size: 15px;
+}
