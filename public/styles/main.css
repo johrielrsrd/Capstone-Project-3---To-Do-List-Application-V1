@@ -17,11 +17,12 @@ body {
 }
 
 .taskToolCtn {
-  border: 1px solid black;
+  border: 1px solid #EFF5F5;
   padding: 5px;
   box-shadow: 5px 10px 8px #888888;
   width: 350px;
   background-color: #EFF5F5;
+  border-radius: 5px;
 }
 
 .formCtn {
@@ -42,15 +43,18 @@ body {
 }
 
 .inputBar {
-  border: 1px solid black;
+  border: none;
   width: 97%;
-  height: 37px;
+  height: 35px;
   font-size: 15px;
+  border-radius: 5px;
+  outline: none;
 }
 
 button[name=customList] {
-  height: 41px;
+  height: 100%;
   border: none;
+  border-radius: 5px;
   background-color: #497174;
   color:white;
   transition-duration: 0.4s;
